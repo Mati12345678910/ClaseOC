@@ -1,0 +1,159 @@
+/* ==========================
+   ESTILOS GENERALES
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(135deg,#edf2f7,#dbeafe);
+    color:#333;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background:linear-gradient(135deg,#0f4c81,#1976d2);
+    color:white;
+    text-align:center;
+    padding:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+header li{
+    list-style:none;
+    margin-bottom:15px;
+}
+
+header a{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    background:#1565c0;
+    padding:10px 20px;
+    border-radius:8px;
+    transition:.3s;
+    font-weight:bold;
+}
+
+header a:hover{
+    background:#0d47a1;
+}
+
+/* ==========================
+   FORMULARIO
+========================== */
+
+main{
+    width:90%;
+    max-width:550px;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"]{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    transition:.3s;
+}
+
+input:focus{
+    outline:none;
+    border-color:#1976d2;
+    box-shadow:0 0 8px rgba(25,118,210,.3);
+}
+
+input[type="checkbox"]{
+    margin-left:10px;
+    transform:scale(1.2);
+}
+
+/* ==========================
+   BOTONES
+========================== */
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button[type="submit"]{
+    background:#2e7d32;
+    color:white;
+}
+
+button[type="submit"]:hover{
+    background:#1b5e20;
+}
+
+button[type="button"]{
+    background:#1976d2;
+    color:white;
+}
+
+button[type="button"]:hover{
+    background:#0d47a1;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    margin-top:auto;
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    main{
+        padding:25px;
+    }
+
+    header h1{
+        font-size:1.8rem;
+    }
+
+}

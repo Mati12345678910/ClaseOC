@@ -1,0 +1,149 @@
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg,#eef2f7,#dbe7f3);
+    color:#333;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    background:linear-gradient(135deg,#0d47a1,#1976d2);
+    color:white;
+    text-align:center;
+    padding:35px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+header h1{
+    font-size:2.2rem;
+    letter-spacing:2px;
+    font-weight:600;
+}
+
+/* ===========================
+   CONTENIDO PRINCIPAL
+=========================== */
+
+main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+}
+
+/* Caja del menú */
+
+.menu-list{
+    width:100%;
+    max-width:500px;
+    list-style:none;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+/* Separación */
+
+.menu-list li{
+    margin:18px 0;
+}
+
+/* Botones */
+
+.menu-list a{
+    display:block;
+    text-decoration:none;
+    background:#1976d2;
+    color:white;
+    padding:16px;
+    border-radius:10px;
+    font-size:1.05rem;
+    font-weight:600;
+    transition:.3s;
+    text-align:center;
+}
+
+/* Hover */
+
+.menu-list a:hover{
+    background:#0d47a1;
+    transform:translateY(-4px);
+    box-shadow:0 8px 18px rgba(13,71,161,.35);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#1f2937;
+    color:white;
+    padding:25px;
+}
+
+.footer-info{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+    margin-bottom:15px;
+    font-size:.95rem;
+}
+
+.footer-info span{
+    opacity:.9;
+}
+
+.footer-info strong{
+    color:#64b5f6;
+}
+
+.copyright{
+    text-align:center;
+    font-size:.9rem;
+    color:#bdbdbd;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:1.8rem;
+    }
+
+    .menu-list{
+        padding:25px;
+    }
+
+    .menu-list a{
+        font-size:1rem;
+        padding:14px;
+    }
+
+    .footer-info{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+
+}
