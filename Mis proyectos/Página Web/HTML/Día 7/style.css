@@ -1,149 +1,138 @@
-/* ===========================
-   ESTILOS GENERALES
-=========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg,#eef2f7,#dbe7f3);
-    color:#333;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
+/* ===== TIPOGRAFÍA GENERAL ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #1f2937;
+    line-height: 1.5;
 }
 
-/* ===========================
-   HEADER
-=========================== */
-
-header{
-    background:linear-gradient(135deg,#0d47a1,#1976d2);
-    color:white;
-    text-align:center;
-    padding:35px;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background-color: #0f172a; /* azul oscuro profesional */
+    color: #ffffff;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-header h1{
-    font-size:2.2rem;
-    letter-spacing:2px;
-    font-weight:600;
+/* LOGO A LA IZQUIERDA */
+.logo img {
+    height: 55px;
+    width: auto;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
 }
 
-/* ===========================
-   CONTENIDO PRINCIPAL
-=========================== */
-
-main{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:50px 20px;
+.logo img:hover {
+    transform: scale(1.05);
 }
 
-/* Caja del menú */
-
-.menu-list{
-    width:100%;
-    max-width:500px;
-    list-style:none;
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
+/* TÍTULO */
+.header h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
 }
 
-/* Separación */
-
-.menu-list li{
-    margin:18px 0;
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* Botones */
-
-.menu-list a{
-    display:block;
-    text-decoration:none;
-    background:#1976d2;
-    color:white;
-    padding:16px;
-    border-radius:10px;
-    font-size:1.05rem;
-    font-weight:600;
-    transition:.3s;
-    text-align:center;
+/* ===== MENÚ ===== */
+.menu-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
 }
 
-/* Hover */
-
-.menu-list a:hover{
-    background:#0d47a1;
-    transform:translateY(-4px);
-    box-shadow:0 8px 18px rgba(13,71,161,.35);
+.menu-list li a {
+    display: block;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s ease;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
-
-footer{
-    background:#1f2937;
-    color:white;
-    padding:25px;
+.menu-list li a:hover {
+    background-color: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
-.footer-info{
-    display:flex;
-    justify-content:center;
-    gap:35px;
-    flex-wrap:wrap;
-    margin-bottom:15px;
-    font-size:.95rem;
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 50px;
+    background-color: #111827;
+    color: #d1d5db;
+    padding: 25px;
+    text-align: center;
 }
 
-.footer-info span{
-    opacity:.9;
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
 }
 
-.footer-info strong{
-    color:#64b5f6;
+.footer-info span {
+    background-color: #1f2937;
+    padding: 8px 12px;
+    border-radius: 6px;
 }
 
-.copyright{
-    text-align:center;
-    font-size:.9rem;
-    color:#bdbdbd;
+.copyright {
+    font-size: 0.85rem;
+    opacity: 0.8;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+/* ===== RESPONSIVE ===== */
 
-@media(max-width:768px){
-
-    header h1{
-        font-size:1.8rem;
+/* Tablets */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .menu-list{
-        padding:25px;
+    .header h1 {
+        font-size: 1.2rem;
     }
 
-    .menu-list a{
-        font-size:1rem;
-        padding:14px;
+    .logo img {
+        height: 50px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .menu-list {
+        grid-template-columns: 1fr;
     }
 
-    .footer-info{
-        flex-direction:column;
-        text-align:center;
-        gap:10px;
+    .footer-info {
+        flex-direction: column;
     }
-
 }
