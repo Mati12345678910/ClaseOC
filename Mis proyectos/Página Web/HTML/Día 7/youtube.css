@@ -95,7 +95,7 @@ footer{
    RESPONSIVE
 ========================== */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
     header h1{
         font-size:1.8rem;
@@ -104,5 +104,15 @@ footer{
     main p{
         font-size:16px;
     }
+    main p{
+    background:white;
+    margin-bottom:20px;
+    padding:20px;
+    border-left:8px solid #15ff00;
+    border-radius:10px;
+    box-shadow:0 5px 12px rgba(255, 0, 0, 0.1);
+    font-size:18px;
+    transition:.3s;
+}
 
 }

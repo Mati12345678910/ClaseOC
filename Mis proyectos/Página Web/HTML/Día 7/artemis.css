@@ -102,7 +102,7 @@ footer{
    RESPONSIVE
 ========================== */
 
-@media(max-width:768px){
+@media(max-width:600px){
 
     header h1{
         font-size:2rem;
@@ -115,5 +115,10 @@ footer{
     p{
         font-size:1rem;
     }
+@media(max-width:900px){
+    iframe{
+        height: 400px;
+    }
 
+}
 }
