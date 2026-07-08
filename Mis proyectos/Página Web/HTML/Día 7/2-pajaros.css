@@ -7,219 +7,179 @@
 }
 
 body{
-
     font-family:'Inter',sans-serif;
     background:#eef3f7;
     color:#243447;
-
 }
 
 
 /* HEADER */
 
 header{
-
     background:linear-gradient(135deg,#07162d,#145da0);
-
     color:white;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     padding:20px 8%;
-
     box-shadow:0 5px 20px rgba(0,0,0,.25);
-
 }
-
 
 .logo img{
-
     width:85px;
-
     transition:.3s;
-
 }
-
 
 .logo img:hover{
-
     transform:scale(1.08);
-
 }
-
 
 header h1{
-
     flex:1;
-
     text-align:center;
-
     font-size:2rem;
-
 }
-
 
 
 /* GALERÍA */
 
 .galeria{
-
     width:90%;
-
     max-width:1300px;
-
     margin:50px auto;
-
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-
     gap:30px;
-
 }
 
 
+/* TARJETAS (Modificado para efecto giratorio) */
 
-/* TARJETAS */
-
-.ave{
-
-    background:white;
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-
-    text-align:center;
-
-    transition:.3s;
-
+.ave {
+    background: transparent; /* El fondo se maneja en las caras internas */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    perspective: 1000px; /* Habilita el efecto 3D */
+    height: 274px; /* Altura fija calculada según tus proporciones originales */
+    transition: .3s;
 }
 
-
-.ave:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 15px 30px rgba(0,0,0,.20);
-
+.ave:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,.20);
+    transform: translateY(-8px); /* Conserva tu sutil salto hacia arriba */
 }
 
-
-.ave img{
-
-    width:100%;
-
-    height:220px;
-
-    object-fit:cover;
-
-    transition:.4s;
-
+/* Contenedor que realmente gira */
+.ave-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
-
-.ave:hover img{
-
-    transform:scale(1.05);
-
+.ave:hover .ave-inner {
+    transform: rotateY(180deg);
 }
 
-
-.ave p{
-
-    padding:15px;
-
-    font-size:1.1rem;
-
-    font-weight:600;
-
-    color:#145da0;
-
+/* Caras frontal y trasera */
+.ave-front, .ave-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
 }
 
+/* CARA FRONTAL (Tu diseño exacto original) */
+.ave-front img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.ave-front p {
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #145da0;
+}
+
+/* CARA TRASERA */
+.ave-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ave-back h3 {
+    font-size: 1.2rem;
+    color: #145da0;
+    margin-bottom: 10px;
+}
+
+.ave-back .descripcion {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #243447;
+    padding: 0;
+}
 
 
 /* FOOTER */
 
 footer{
-
     background:#07162d;
-
     color:white;
-
     text-align:center;
-
     padding:30px;
-
 }
-
 
 footer p{
-
     line-height:1.8;
-
 }
-
 
 
 /* RESPONSIVE */
 
 @media(max-width:768px){
-
     header{
-
         flex-direction:column;
-
         gap:15px;
-
         text-align:center;
-
     }
-
 
     header h1{
-
         font-size:1.5rem;
-
     }
-
 
     .logo img{
-
         width:70px;
-
     }
-
 
     .galeria{
-
         width:95%;
-
     }
-
 }
 
-
 @media(max-width:480px){
-
     header h1{
-
         font-size:1.25rem;
-
     }
 
+    .ave {
+        height: 244px; /* Ajuste para pantallas pequeñas */
+    }
 
-    .ave img{
-
+    .ave-front img{
         height:190px;
-
     }
-
 }
