@@ -6,40 +6,91 @@
 }
 
 body {
-    font-family: "Georgia", serif;
-    background-color: #f6f1e7;
-    color: #2b2b2b;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f6f9;
+
+    color: #1f2937;
+
+    line-height: 1.5;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
 }
 
+
+
 /* ===== HEADER ===== */
+
 .header {
-    background-color: #1b4332;
-    color: white;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     padding: 15px 25px;
+
+    background-color: #3A5F42;
+
+    color: #ffffff;
+
     flex-wrap: wrap;
+
+    gap: 10px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
     
     /* Cambios agregados para que baje con el lector */
     position: sticky;
     top: 0;
     z-index: 1000;
+
 }
 
-/* LOGO SIN BORDE */
+
+
+/* LOGO */
+
 .logo img {
-    height: 60px;
-    border-radius: 0;   /* 👈 sin borde blanco ni redondeo */
-    background: transparent;
+
+    height: 55px;
+
+    width: auto;
+
+    border-radius: 6px;
+
+    transition: transform 0.2s ease;
+
 }
 
-/* TITULO CENTRADO */
+
+.logo img:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+
+/* TÍTULO */
+
 .header h1 {
-    flex: 1;
+
+    font-size: 1.4rem;
+
+    font-weight: 600;
+
     text-align: center;
-    font-size: 2rem;
-    letter-spacing: 2px;
+
+    flex: 1;
+
 }
 
 /* ===== MENU ===== */
