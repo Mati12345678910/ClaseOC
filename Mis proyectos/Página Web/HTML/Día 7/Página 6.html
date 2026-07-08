@@ -1,57 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="formularios.css">
+    <title>Formulario de Aplicación Laboral</title>
+    <link rel="stylesheet" href="6-formulario.css">
 </head>
 <body>
-    <header>
-        <li><a href="index.html">Página Principal</a></li>
-        <h2>Formulario para la Aplicación Laboral</h2>
-    </header>
-    <main>
-        <label>Nombre:</label>
-        <input type="text" placeholder="Escribe tu nombre. Ej.: Matías" required>
-        <br>
-        <label>Apellido:</label>
-        <input type="text" placeholder="Escribe tu apellido. Ej.: González" required>
-        <br>
-        <label>Fecha de Nacimiento:</label>
-        <input type="date" requirede>
-        <br>
-        <label>Número de teléfono:</label>
-        <input type="Número de teléfono." min="10" max="20" required>
-        <br>
-        <label>Inglés básico</label>
-        <input type="checkbox" name="inglés">
-        <br>
-        <label>Educación nivel primario</label>
-        <input type="checkbox" name="primario">
-        <br>
-        <label>Educación nivel secundario</label>
-        <input type="checkbox" name="secundario">
-        <br>
-        <label>Estudios profesionales</label>
-        <input type="checkbox" name="facultad">
-        <br>
-        <label>Carrera estudiada:</label>
-        <input type="text" placeholder="Escribe la carrera que has estudiado." required>
-        <br>
-        <button type="submit">Enviar Datos</button>
-        <br>
-        <a href="index.html">
-        <button type="button">Volver al Index</button>
-</a>
-    </main>
-    <footer>
-        <p>
-            - Instagram: ages.abello
-            - Facebook: Lacocinadiluigi
-            - Teléfono de línea: +54 9 11 6767 6767
-            &copy; 2023 Mi Proyecto de Python - Clase OC
-        </p>
-    </footer>
+
+<header>
+    <a href="index.html" class="logo">
+        <img src="./logo-removebg-preview.png" alt="Logo Página Principal">
+    </a>
+
+    <h1>Formulario de Aplicación Laboral</h1>
+</header>
+
+<main>
+
+    <section class="contenedor-formulario">
+
+        <div class="encabezado-formulario">
+            <h2>Información del postulante</h2>
+            <p>
+                Complete el siguiente formulario con sus datos personales y académicos.
+                Toda la información será tratada de forma confidencial.
+            </p>
+        </div>
+
+        <form>
+
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Ej.: Matías"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="apellido">Apellido</label>
+                <input
+                    type="text"
+                    id="apellido"
+                    placeholder="Ej.: González"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="fecha">Fecha de nacimiento</label>
+                <input
+                    type="date"
+                    id="fecha"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Número de teléfono</label>
+                <input
+                    type="tel"
+                    id="telefono"
+                    placeholder="+54 9 11 1234 5678"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="carrera">Carrera estudiada</label>
+                <input
+                    type="text"
+                    id="carrera"
+                    placeholder="Ej.: Ingeniería Informática">
+            </div>
+
+            <fieldset>
+
+                <legend>Formación y conocimientos</legend>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="ingles">
+                    <label for="ingles">Inglés básico</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="primario">
+                    <label for="primario">Educación primaria</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="secundario">
+                    <label for="secundario">Educación secundaria</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="profesional">
+                    <label for="profesional">Estudios profesionales</label>
+                </div>
+
+            </fieldset>
+
+            <div class="botones">
+
+                <button type="submit">
+                    Enviar solicitud
+                </button>
+
+                <a href="index.html" class="btn-secundario">
+                    Volver al inicio
+                </a>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        Instagram: ages.abello |
+        Facebook: Lacocinadiluigi |
+        Teléfono: +54 9 11 6767 6767
+    </p>
+
+    <p>
+        &copy; 2023 Mi Proyecto de Python - Clase OC
+    </p>
+
+</footer>
+
 </body>
 </html>
